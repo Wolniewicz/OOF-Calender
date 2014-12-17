@@ -1,0 +1,90 @@
+
+extends layout
+
+block content
+    h1= title
+    p Welcome to our test
+
+    // Wrapper
+    #wrapper
+
+        // USER INFO
+        #userInfo
+            h2 OOF Info
+            p
+                strong ID:
+                |  <span id='oofInfoId'></span>
+                br
+                strong Photo Url:
+                |  <span id='oofInfoPhotoUrl'></span>
+                br
+                strong Name:
+                |  <span id='oofInfoName'></span>
+                br
+                strong From Date:
+                |  <span id='oofInfoFromDate'></span>
+                br
+                strong To Date:
+                |  <span id='oofInfoToDate'></span>
+                br
+                strong Reason:
+                |  <span id='oofInfoReason'></span>
+                br
+                strong Note:
+                |  <span id='oofInfoNote'></span>
+                br
+        // /USER INFO
+
+        // USER LIST
+        h2 OOF List
+        #userList
+            table
+                thead
+                    th Name
+                    th Photo
+                    th Start Date
+                    th End Date
+                    th Note
+                    th Delete?
+                tbody
+        // /USER LIST
+
+        // ADD USER
+        h2 Add OOF
+        #addOOF
+            fieldset
+                input#inputOOFName(type='text', placeholder='Name')
+                input#inputOOFPhotoURL(type='text', placeholder='Photo URL')
+                br
+                input#inputOOFFromDate(type='text', placeholder='From Date')
+                input#inputOOFToDate(type='text', placeholder='To Date')
+                br
+                input#inputOOFReason(type='text', placeholder='Reason')
+                input#inputOOFNote(type='text', placeholder='Note')
+                br
+                button#btnAddOOF Add OOF
+                br
+                br
+        // /ADD OOF
+
+
+        // Put OOF
+        h2 Put OOF
+        #putOOF
+            fieldset
+                input#putOOFID(type='text', placeholder='Which OOF ID To update?')
+                br
+                p New details, if empty will remain the same
+                input#putOOFName(type='text', placeholder='Name')
+                input#putOOFPhotoURL(type='text', placeholder='Photo URL')
+                br
+                input#putOOFFromDate(type='text', placeholder='From Date')
+                input#putOOFToDate(type='text', placeholder='To Date')
+                br
+                input#putOOFReason(type='text', placeholder='Reason')
+                input#putOOFNote(type='text', placeholder='Note')
+                br
+                button#btnPutOOF Put OOF
+        // /ADD OOF
+
+    // /WRAPPER
